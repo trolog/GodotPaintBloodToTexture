@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/BG1_S.png" type="Texture" id=1]
+[ext_resource path="res://art/BG2_S.png" type="Texture" id=2]
+[ext_resource path="res://art/BG3_S.png" type="Texture" id=3]
+[ext_resource path="res://scene/platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/blood_scene.gd" type="Script" id=5]
+[ext_resource path="res://scene/blood.tscn" type="PackedScene" id=7]
+
+[node name="blood_scene" type="Node2D"]
+script = ExtResource( 5 )
+blood = ExtResource( 7 )
+
+[node name="BG" type="Position2D" parent="."]
+position = Vector2( -54.6157, 62.7309 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BG1_S" type="Sprite" parent="BG"]
+position = Vector2( 601.878, 280.597 )
+scale = Vector2( 1.16196, 1.52 )
+texture = ExtResource( 1 )
+
+[node name="BG2_S" type="Sprite" parent="BG"]
+position = Vector2( 643.235, 293.135 )
+scale = Vector2( 1.27069, 1.16 )
+texture = ExtResource( 2 )
+
+[node name="BG3_S" type="Sprite" parent="BG"]
+position = Vector2( 686.592, 277.523 )
+scale = Vector2( 1.299, 1.28 )
+texture = ExtResource( 3 )
+
+[node name="platforms" type="Position2D" parent="."]
+position = Vector2( 17.3986, 44.3818 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="platform" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 148.348, 443.125 )
+
+[node name="platform2" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 276.555, 443.118 )
+
+[node name="platform3" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 555.634, 301.717 )
+
+[node name="platform4" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 556.341, 178.681 )
+
+[node name="platform5" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 853.326, 480.615 )
+
+[node name="platform6" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 115.755, 119.368 )
+
+[node name="platform7" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 923.226, 229.964 )
+
+[node name="platform8" parent="platforms" instance=ExtResource( 4 )]
+position = Vector2( 284.622, 257.316 )
